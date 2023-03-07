@@ -1,1 +1,15 @@
+{% extends 'layouts/navbar.html' %}
+
+{% block content %}
+
 <h1>Projects</h1>
+<a href={% url 'create_project' %}>Create new project</a>
+{% for project in projects %}
+
+<div>
+    <h3>{{project.name}}</h3>
+</div>
+
+{% endfor %}
+
+{% endblock content %}

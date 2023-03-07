@@ -1,1 +1,28 @@
+{% extends 'layouts/navbar.html' %}
+
+{% block content %}
+
 <h1>Tasks</h1>
+<a href="{% url 'create_task' %}">Create new task</a>
+{% for task in tasks %}
+
+<div>
+    <h3>{{task.title}}</h3>
+    <p>{{task.description}}</p>
+    <p>Project: {{task.project.name}}</p>
+
+    {% if task.done == False  %}
+    <p>Task Undone</p>
+    <button>✅ Done</button>
+    
+    {% else %}
+    <p>Task Done</p>
+    {% endif %}
+    
+    <button>❌ Delete</button>
+    <hr>
+</div>
+
+{% endfor %}
+
+{% endblock content %}
