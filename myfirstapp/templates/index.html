@@ -1,8 +1,13 @@
-{% extends 'layouts/navbar.html' %}
+{% extends 'layouts/navbar.html' %} {% load static %} {% block content %}
 
-{% block content %}
-
-<h1>{{title}}</h1>
-<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam provident officiis doloremque labore molestias laboriosam id fugiat qui, aut eaque.</p>
+<div class="index-container">
+    <h1 class="index-title">{{title}}</h1>
+    <img src="{% static 'logo.jpg' %}" width="150px" class="index-logo" />
+    <p class="index-text">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam
+        provident officiis doloremque labore molestias laboriosam id fugiat qui,
+        aut eaque.
+    </p>
+</div>
 
 {% endblock content %}

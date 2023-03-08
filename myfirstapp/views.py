@@ -1,4 +1,4 @@
-from django.http import HttpResponse, JsonResponse
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from .models import Project, Task
 from .forms import CreateNewTask, CreateNewProject
